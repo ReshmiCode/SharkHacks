@@ -41,7 +41,7 @@ export default function UserForm() {
                             onChangeText={(gpm) => setGPM(gpm)}/>
                     </Item>
                     <Button onPress={() => console.log(email)}>
-                        <Text>Create Profile</Text></Button>
+                        <Text>Submit</Text></Button>
                 </Form>
             </Content>
         </Container>
