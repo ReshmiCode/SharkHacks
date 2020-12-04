@@ -8,6 +8,9 @@ import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 
+
+
+
 export default App = () => {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
