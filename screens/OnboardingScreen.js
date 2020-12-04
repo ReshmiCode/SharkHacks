@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function OnboardingScreen(props: any) {
+export default function OnboardingScreen(props) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>App details + User signup</Text>
