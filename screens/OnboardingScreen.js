@@ -1,5 +1,6 @@
 import * as React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Button, Text } from "native-base";
 
 export default function OnboardingScreen(props) {
   return (
@@ -10,6 +11,9 @@ export default function OnboardingScreen(props) {
         style={styles.link}
       >
         <Text style={styles.linkText}>Go to main screen!</Text>
+        <Button>
+          <Text>Click Me!</Text>
+        </Button>
       </TouchableOpacity>
     </View>
   );
