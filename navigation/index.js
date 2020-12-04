@@ -11,6 +11,7 @@ import OnboardingScreen from "../screens/OnboardingScreen";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
 import UserForm from "../components/UserForm";
+import Leaderboard from "../components/Leaderboard";
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -35,6 +36,7 @@ function RootNavigator() {
       <Stack.Screen name="Onboarding" component={OnboardingScreen} />
       <Stack.Screen name="UserForm" component={UserForm} />
       <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen name="Leaderboard" component={Leaderboard} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
