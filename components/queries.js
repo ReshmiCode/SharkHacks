@@ -9,16 +9,18 @@ export const PROFILE = gql`
   }
 `;
 
-const ADD_PROFILE = gql`
+export const ADD_PROFILE = gql`
   mutation(
+    $name: String!
     $email: String!
     $password: String!
-    $GPM: Integer!
-    $showerLength: Integer!
+    $GPM: Int!
+    $showerLength: Int!
   ) {
     insertUser(
       objects: [
         {
+          name: $name
           email: $email
           password: $password
           GPM: $GPM

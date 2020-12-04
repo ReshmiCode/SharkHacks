@@ -42,11 +42,11 @@ export default App = () => {
   }
 
   return (
-    <SafeAreaProvider>
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
+      <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
         <StatusBar />
-      </ApolloProvider>
-    </SafeAreaProvider>
+      </SafeAreaProvider>
+    </ApolloProvider>
   );
 };
