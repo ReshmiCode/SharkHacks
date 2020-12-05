@@ -70,6 +70,46 @@ const Shower = (props) => {
 
   return (
     <>
+      {props.feed && (
+        <Card style={{ flex: 0 }}>
+          <CardItem>
+            <Left>
+              <Thumbnail
+                source={{
+                  uri:
+                    "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
+                }}
+              />
+              <Body>
+                <Text>blahaj</Text>
+                <Text note>December 5th, 2020</Text>
+              </Body>
+            </Left>
+          </CardItem>
+          <CardItem>
+            <Body>
+              <Image
+                source={{
+                  uri:
+                    "https://community.spotify.com/t5/image/serverpage/image-id/102455i71E9CBC86A66460A/image-size/large?v=1.0&px=999",
+                }}
+                style={{ height: 200, width: 360, marginBottom: 6 }}
+              />
+              <Text>
+                blahaj has shared their playlist titled Save the Sharks!
+              </Text>
+            </Body>
+          </CardItem>
+          <CardItem>
+            <Left>
+              <Button transparent textStyle={{ color: "#87838B" }}>
+                <Icon name="md-download" />
+                <Text>5 downloads</Text>
+              </Button>
+            </Left>
+          </CardItem>
+        </Card>
+      )}
       {showers.map(function (shower, i) {
         return (
           <Card style={{ flex: 0 }} key={i}>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { View } from "react-native";
 import { Container, Header, Content, Title, Text, Button } from "native-base";
 
 export default function StartShower(props) {
-  function whenClicked() {
+  function startShower() {
     props.navigation.replace("Leaderboard");
   }
 
@@ -11,11 +12,17 @@ export default function StartShower(props) {
       <Header style={{ backgroundColor: "#3898b0" }}>
         <Title>Start Shower</Title>
       </Header>
-
       <Content padder>
-        <Button large dark onPress={() => whenClicked()}>
-          <Text>Done</Text>
-        </Button>
+        <View
+          style={{ display: "flex", flexDirection: "row", alignSelf: "center" }}
+        >
+          <Button dark onPress={startShower} style={{ marginRight: 20 }}>
+            <Text>Start</Text>
+          </Button>
+          <Button dark onPress={startShower}>
+            <Text>Start with Music</Text>
+          </Button>
+        </View>
       </Content>
     </Container>
   );

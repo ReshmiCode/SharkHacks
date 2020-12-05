@@ -60,15 +60,16 @@ const Login = ({ navigate }) => {
   };
 
   return (
-    <Content>
-      <TouchableOpacity onPress={signInWithGoogle}>
-        <Image
-          source={require("../assets/images/google_sign_in.png")}
-          //Image from Google's branding guidlines
-          //https://developers.google.com/identity/branding-guidelines
-        />
-      </TouchableOpacity>
-    </Content>
+    <TouchableOpacity
+      onPress={signInWithGoogle}
+      style={{ alignSelf: "center" }}
+    >
+      <Image
+        source={require("../assets/images/google_sign_in.png")}
+        //Image from Google's branding guidlines
+        //https://developers.google.com/identity/branding-guidelines
+      />
+    </TouchableOpacity>
   );
 };
 

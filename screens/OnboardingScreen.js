@@ -9,14 +9,16 @@ export default function OnboardingScreen(props) {
         <Title>DropSaver</Title>
       </Header>
       <Content padder>
-        <Text>Sign up here or Login</Text>
-        <Button onPress={() => props.navigation.push("UserForm")}>
-          <Text>Create Profile</Text>
-        </Button>
+        <Text>
+          The shower is a place where we can clean up, cool off, wake up, or
+          relax after a long day. But it’s also a place where we waste a lot of
+          water and energy! Consider this: • The average shower lasts about
+          eight minutes. Since the average showerhead has a water flow of 2.1
+          gallons per minute, each shower uses more than 16 gallons of water! •
+          Across the United States, we use more than one trillion gallons of
+          water each year just for showering.
+        </Text>
         <Login navigate={props.navigation} />
-        <Button>
-          <Text>Login</Text>
-        </Button>
       </Content>
     </Container>
   );
