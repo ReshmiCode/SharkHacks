@@ -14,6 +14,10 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
     uri: "https://amazing-lamb-36.hasura.app/v1/graphql",
+    headers: {
+      "X-Hasura-Role": "admin",
+      accept: "application/json",
+    },
   }),
 });
 

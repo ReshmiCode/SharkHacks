@@ -11,7 +11,6 @@ import OnboardingScreen from "../screens/OnboardingScreen";
 import UserForm from "../screens/UserForm";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
-import UserForm from "../screens/UserForm";
 import Leaderboard from "../components/Leaderboard";
 import Showering from "../components/Showering";
 

@@ -17,7 +17,7 @@ export const ADD_PROFILE = gql`
     $GPM: Int!
     $showerLength: Int!
   ) {
-    insertUser(
+    addUser(
       objects: [
         {
           name: $name

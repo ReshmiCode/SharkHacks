@@ -24,9 +24,9 @@ export default function UserForm(props) {
 
   const submit = () => {
     addUser({
-      variables: { name, email, password, gpm, usualTime },
+      variables: { name, email, password, GPM: gpm, showerLength: usualTime },
     });
-    if (!error && !loading) props.navigation.replace("Root");
+    // if (!error && !loading) props.navigation.replace("Root");
   };
 
   return (
@@ -62,6 +62,7 @@ export default function UserForm(props) {
           >
             <Text>{loading ? "Loading..." : "Create Profile"}</Text>
           </Button>
+          {error && <Text>{error.message}</Text>}
         </Form>
       </Content>
     </Container>
