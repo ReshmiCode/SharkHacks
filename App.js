@@ -12,6 +12,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 
 export default App = () => {
+  
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
   const [isReady, setIsReady] = useState(false);

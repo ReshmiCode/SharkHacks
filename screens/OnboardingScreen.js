@@ -1,12 +1,14 @@
 import * as React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View, Easing } from "react-native";
 import { Button, Text } from "native-base";
 import UserForm from "../components/UserForm"
+
 
 export default function OnboardingScreen(props) {
 
 
   return (
+    
     <View style={styles.container}>
       <Text style={styles.title}>Sign up here or Login</Text>
       {/* <TouchableOpacity
