@@ -19,6 +19,7 @@ exports.getUsers = async (req, res, next) => {
 
 exports.getUser = async (req, res, next) => {
   try {
+    console.log("called");
     const user = await User.find({}).where({ googleID: req.params.id });
     if (user.length == 0)
       return res.status(404).json({
@@ -28,7 +29,7 @@ exports.getUser = async (req, res, next) => {
 
     return res.status(200).json({
       success: true,
-      data: user,
+      data: user[0],
     });
   } catch (error) {
     return res.status(500).json({

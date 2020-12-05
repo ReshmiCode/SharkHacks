@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { Container, Header, Content, Title, Text, Button } from "native-base";
 
-export default function StartShower(props) {
-  function whenClicked() {
-    props.navigation.replace("Leaderboard");
-  }
-
+export default function Feed(props) {
   return (
     <Container>
       <Header>
-        <Title>Start Shower</Title>
+        <Title>Feed</Title>
       </Header>
-
       <Content padder>
-        <Button large dark onPress={() => whenClicked()}>
+        <Button>
           <Text>Done</Text>
         </Button>
       </Content>
