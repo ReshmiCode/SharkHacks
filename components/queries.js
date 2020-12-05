@@ -10,7 +10,7 @@ export const PROFILE = gql`
 `;
 
 export const ADD_PROFILE = gql`
-  mutation(
+  mutation AddUser(
     $name: String!
     $email: String!
     $password: String!
@@ -18,19 +18,17 @@ export const ADD_PROFILE = gql`
     $showerLength: Int!
   ) {
     addUser(
-      objects: [
-        {
-          name: $name
-          email: $email
-          password: $password
-          GPM: $GPM
-          showerLength: $showerLength
-        }
-      ]
+      name: $name
+      email: $email
+      password: $password
+      GPM: $GPM
+      showerLength: $showerLength
     ) {
-      returning {
-        id
-      }
+      name
+      email
+      password
+      GPM
+      showerLength
     }
   }
 `;
