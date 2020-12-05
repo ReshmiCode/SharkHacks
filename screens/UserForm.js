@@ -15,7 +15,6 @@ import {
 } from "native-base";
 
 export default function UserForm(props) {
-  let [email, setEmail] = useState("");
   let [name, setName] = useState("");
   let [password, setPassword] = useState("");
   let [usualTime, setTime] = useState("");
@@ -23,10 +22,11 @@ export default function UserForm(props) {
   const [addUser, { loading, error }] = useMutation(ADD_PROFILE);
 
   const submit = () => {
-    addUser({
+    /*addUser({
       variables: { name, email, password, GPM: gpm, showerLength: usualTime },
-    });
+    });*/
     // if (!error && !loading) props.navigation.replace("Root");
+    props.navigation.replace("Root");
   };
 
   return (
@@ -41,10 +41,6 @@ export default function UserForm(props) {
             <Input onChangeText={(name) => setName(name)} />
           </Item>
           <Item floatingLabel>
-            <Label>Email</Label>
-            <Input onChangeText={(email) => setEmail(email)} />
-          </Item>
-          <Item floatingLabel>
             <Label>Password</Label>
             <Input onChangeText={(password) => setPassword(password)} />
           </Item>
@@ -53,17 +49,18 @@ export default function UserForm(props) {
             <Input onChangeText={(usualTime) => setTime(usualTime)} />
           </Item>
           <Item floatingLabel>
-            <Label>Your shower is how many gal per min?</Label>
+            <Label>Your showerhead is how many gpm*?</Label>
             <Input onChangeText={(gpm) => setGPM(gpm)} />
           </Item>
-          <Button
-            onPress={submit}
-            style={{ alignSelf: "center", marginTop: 50 }}
-          >
+          <Button onPress={submit} style={{ alignSelf: "center", margin: 50 }}>
             <Text>{loading ? "Loading..." : "Create Profile"}</Text>
           </Button>
           {error && <Text>{error.message}</Text>}
         </Form>
+        <Text>
+          *gpm means gallons per minute. If you are not sure of your own, the
+          average is 2.5
+        </Text>
       </Content>
     </Container>
   );

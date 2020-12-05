@@ -6,7 +6,7 @@ import { IOS_CLIENT_ID, ANDROID_CLIENT_ID } from "../config";
 
 const axios = require("axios").default;
 
-const GoogleAuth = ({ navigate }) => {
+const Login = ({ navigate }) => {
   const createAcc = (user) => {
     console.log(user.id);
     axios
@@ -48,7 +48,8 @@ const GoogleAuth = ({ navigate }) => {
       });
 
       if (LogInResult.type === "success") {
-        createAcc(LogInResult.user);
+        // createAcc(LogInResult.user);
+        navigate.replace("UserForm");
       } else {
         return { cancelled: true };
       }
@@ -71,4 +72,4 @@ const GoogleAuth = ({ navigate }) => {
   );
 };
 
-export default GoogleAuth;
+export default Login;
