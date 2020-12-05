@@ -11,7 +11,7 @@ const BottomTab = createBottomTabNavigator();
 export default function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
-      initialRouteName="Profile"
+      initialRouteName="Shower"
       tabBarOptions={{
         activeTintColor: "#fff",
         style: {
