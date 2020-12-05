@@ -20,6 +20,11 @@ exports.getUsers = async (req, res, next) => {
 exports.getUser = async (req, res, next) => {
   try {
     const user = await User.find({}).where({ googleID: req.params.id });
+    if (user.length == 0)
+      return res.status(404).json({
+        success: false,
+        error: "No user found",
+      });
 
     return res.status(200).json({
       success: true,

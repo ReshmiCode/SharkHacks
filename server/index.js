@@ -19,9 +19,9 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use("/api/v1/users", users);
+app.use("/api/users", users);
 
-app.use("/api/v1/showers", showers);
+app.use("/api/showers", showers);
 
 mongoose
   .connect(process.env.MONGO_URI, {

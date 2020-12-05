@@ -19,15 +19,5 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ReshmiCode/HackTheNE"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ReshmiCode/HackTheNE/issues"
-  },
-  "homepage": "https://github.com/ReshmiCode/HackTheNE#readme"
+  }
 }
