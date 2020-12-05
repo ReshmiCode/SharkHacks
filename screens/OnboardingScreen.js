@@ -1,9 +1,12 @@
 import * as React from "react";
+import { StyleSheet, TouchableOpacity, View, Easing } from "react-native";
 import { StyleSheet, View } from "react-native";
 import { Button, Text } from "native-base";
 
+
 export default function OnboardingScreen(props) {
   return (
+    
     <View style={styles.container}>
       <Text style={styles.title}>Sign up here or Login</Text>
       <Button onPress={() => props.navigation.push("UserForm")}>
