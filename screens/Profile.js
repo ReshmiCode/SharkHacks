@@ -28,8 +28,8 @@ const Profile = (props) => {
   }, [refreshing]);
 
   return (
-    <Container>
-      <Header>
+    <Container style={{ backgroundColor: "#88d1e3" }}>
+      <Header style={{ backgroundColor: "#3898b0" }}>
         <Title>Your Profile</Title>
       </Header>
       <Content padder>
@@ -56,7 +56,7 @@ const Profile = (props) => {
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>70 points</Text>
           </View>
         </View>
-        <ShowerList />
+        <ShowerList feed={false} />
       </Content>
     </Container>
   );

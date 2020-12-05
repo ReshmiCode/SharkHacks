@@ -16,25 +16,46 @@ import {
 const axios = require("axios").default;
 
 const Shower = (props) => {
-  let showers = [
-    {
-      user: "rreshmi",
-      date: "December 4th, 2020",
-      duration: 6,
-      points: 40,
-      profPic:
-        "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
-      extra: "Listened to a playlist including Ariana Grande and more",
-    },
-    {
-      user: "rreshmi",
-      date: "December 3th, 2020",
-      duration: 8,
-      points: 30,
-      profPic:
-        "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
-    },
-  ];
+  let showers = props.feed
+    ? [
+        {
+          user: "blahaj",
+          date: "December 5th, 2020",
+          duration: 10,
+          points: 20,
+          profPic:
+            "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
+          extra: "Listened to a playlist including Save the Sharks and more",
+        },
+        {
+          user: "sarahSings",
+          date: "December 5th, 2020",
+          duration: 3,
+          points: 50,
+          profPic:
+            "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
+          extra: "Listened to a playlist including Twenty One Pilots and more",
+        },
+      ]
+    : [
+        {
+          user: "rreshmi",
+          date: "December 4th, 2020",
+          duration: 6,
+          points: 40,
+          profPic:
+            "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
+          extra: "Listened to a playlist including Ariana Grande and more",
+        },
+        {
+          user: "rreshmi",
+          date: "December 3th, 2020",
+          duration: 8,
+          points: 30,
+          profPic:
+            "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
+        },
+      ];
   /*let [showers, setShowers] = useState([]);
 
   useEffect(() => {
@@ -48,7 +69,7 @@ const Shower = (props) => {
   }, []);*/
 
   return (
-    <Container>
+    <>
       {showers.map(function (shower, i) {
         return (
           <Card style={{ flex: 0 }} key={i}>
@@ -89,7 +110,7 @@ const Shower = (props) => {
           </Card>
         );
       })}
-    </Container>
+    </>
   );
 };
 

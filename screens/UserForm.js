@@ -30,9 +30,9 @@ export default function UserForm(props) {
   };
 
   return (
-    <Container>
-      <Header>
-        <Title>Create Your Profile</Title>
+    <Container style={{ backgroundColor: "#88d1e3" }}>
+      <Header style={{ backgroundColor: "#3898b0" }}>
+        <Title>Profile Setup</Title>
       </Header>
       <Content style={{ padding: 10 }}>
         <Form>

@@ -7,8 +7,8 @@ export default function StartShower(props) {
   }
 
   return (
-    <Container>
-      <Header>
+    <Container style={{ backgroundColor: "#88d1e3" }}>
+      <Header style={{ backgroundColor: "#3898b0" }}>
         <Title>Start Shower</Title>
       </Header>
 

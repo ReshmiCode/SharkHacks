@@ -16,10 +16,7 @@ import LinkingConfiguration from "./LinkingConfiguration";
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({ colorScheme }) {
   return (
-    <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
-    >
+    <NavigationContainer linking={LinkingConfiguration} theme={DefaultTheme}>
       <RootNavigator />
     </NavigationContainer>
   );
@@ -32,9 +29,9 @@ const Stack = createStackNavigator();
 function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen name="Onboarding" component={OnboardingScreen} />
       <Stack.Screen name="UserForm" component={UserForm} />
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}

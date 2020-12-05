@@ -4,8 +4,8 @@ import Login from "../components/Login";
 
 export default function OnboardingScreen(props) {
   return (
-    <Container>
-      <Header>
+    <Container style={{ backgroundColor: "#88d1e3" }}>
+      <Header style={{ backgroundColor: "#3898b0" }}>
         <Title>DropSaver</Title>
       </Header>
       <Content padder>

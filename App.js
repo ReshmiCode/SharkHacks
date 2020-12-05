@@ -10,6 +10,8 @@ import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 
+console.disableYellowBox = true;
+
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
@@ -22,7 +24,6 @@ const client = new ApolloClient({
 });
 
 export default App = () => {
-  
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
   const [isReady, setIsReady] = useState(false);
