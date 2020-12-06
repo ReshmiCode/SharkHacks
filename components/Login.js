@@ -62,7 +62,7 @@ const Login = ({ navigate }) => {
   return (
     <TouchableOpacity
       onPress={signInWithGoogle}
-      style={{ alignSelf: "center" }}
+      style={{ alignSelf: "center", marginTop: 10 }}
     >
       <Image
         source={require("../assets/images/google_sign_in.png")}

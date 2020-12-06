@@ -45,21 +45,25 @@ export default function UserForm(props) {
             <Input onChangeText={(password) => setPassword(password)} />
           </Item>
           <Item floatingLabel>
-            <Label>How long is your usual shower?</Label>
+            <Label>How long is your usual shower? (min)</Label>
             <Input onChangeText={(usualTime) => setTime(usualTime)} />
           </Item>
           <Item floatingLabel>
             <Label>Your showerhead is how many gpm*?</Label>
             <Input onChangeText={(gpm) => setGPM(gpm)} />
           </Item>
-          <Button onPress={submit} style={{ alignSelf: "center", margin: 50 }}>
+          <Button
+            dark
+            onPress={submit}
+            style={{ alignSelf: "center", margin: 50 }}
+          >
             <Text>{loading ? "Loading..." : "Create Profile"}</Text>
           </Button>
           {error && <Text>{error.message}</Text>}
         </Form>
         <Text>
           *gpm means gallons per minute. If you are not sure of your own, the
-          average is 2.5
+          average is 2.5 gpm.
         </Text>
       </Content>
     </Container>

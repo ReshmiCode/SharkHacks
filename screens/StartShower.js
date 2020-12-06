@@ -18,7 +18,7 @@ export default function StartShower(props) {
   const [showPlaylist, setPlaylist] = useState(false);
   const [counter, setCounter] = useState(-1);
   const [start, setStart] = useState(false);
-  const [numPicker, setNumPicker] = useState(5);
+  const [numPicker, setNumPicker] = useState(6);
   const wave = useRef(null);
 
   useEffect(() => wave.current.setWaterHeight(0), []);
@@ -70,7 +70,7 @@ export default function StartShower(props) {
         <Content padder>
           {!start && (
             <View>
-              <Title style={{ marginBottom: 30 }}>
+              <Title style={{ marginBottom: 10 }}>
                 Choose Your Shower Duration
               </Title>
               <SliderPicker

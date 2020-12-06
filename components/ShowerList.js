@@ -38,16 +38,16 @@ const Shower = (props) => {
     : [
         {
           user: "rreshmi",
-          date: "December 4th, 2020",
-          duration: 6,
-          points: 24,
+          date: "December 5th, 2020",
+          duration: 1,
+          points: 29,
           profPic:
             "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
           extra: "Listened to a playlist including Ariana Grande and more",
         },
         {
           user: "rreshmi",
-          date: "December 3th, 2020",
+          date: "December 4th, 2020",
           duration: 8,
           points: 22,
           profPic:
