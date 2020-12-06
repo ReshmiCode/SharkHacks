@@ -53,8 +53,13 @@ const Profile = (props) => {
             }}
           >
             <Text style={{ fontSize: 25, fontWeight: "bold" }}>rreshmi</Text>
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>70 points</Text>
-            <Text style={{ fontSize: 15 }}>View Playlists</Text>
+            <Text style={{ fontSize: 20, fontWeight: "bold" }}>46 points</Text>
+            <View style={{ display: "flex", flexDirection: "row" }}>
+              <Text style={{ fontSize: 15, marginRight: 15 }}>
+                View Playlists
+              </Text>
+              <Text style={{ fontSize: 15 }}>Edit Profile</Text>
+            </View>
           </View>
         </View>
         <ShowerList feed={false} />

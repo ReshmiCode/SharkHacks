@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Image } from "react-native";
 import {
-  Container,
-  Content,
   Card,
   CardItem,
   Thumbnail,
@@ -31,7 +29,7 @@ const Shower = (props) => {
           user: "sarahSings",
           date: "December 5th, 2020",
           duration: 3,
-          points: 50,
+          points: 27,
           profPic:
             "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
           extra: "Listened to a playlist including Twenty One Pilots and more",
@@ -42,7 +40,7 @@ const Shower = (props) => {
           user: "rreshmi",
           date: "December 4th, 2020",
           duration: 6,
-          points: 40,
+          points: 24,
           profPic:
             "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
           extra: "Listened to a playlist including Ariana Grande and more",
@@ -51,7 +49,7 @@ const Shower = (props) => {
           user: "rreshmi",
           date: "December 3th, 2020",
           duration: 8,
-          points: 30,
+          points: 22,
           profPic:
             "https://www.ikea.com/us/en/images/products/blahaj-soft-toy-shark__0710175_PE727378_S5.JPG",
         },

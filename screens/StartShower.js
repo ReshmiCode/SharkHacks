@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { View } from "react-native";
+import { View, Image } from "react-native";
 import {
   Container,
   Header,
@@ -15,6 +15,7 @@ import { SliderPicker } from "react-native-slider-picker";
 
 export default function StartShower(props) {
   const [timer, setTimer] = useState(null);
+  const [showPlaylist, setPlaylist] = useState(false);
   const [counter, setCounter] = useState(-1);
   const [start, setStart] = useState(false);
   const [numPicker, setNumPicker] = useState(5);
@@ -30,6 +31,7 @@ export default function StartShower(props) {
   }, [counter]);
 
   const startShower = () => {
+    setPlaylist(false);
     setCounter(numPicker * 60);
     let locTimer = setInterval(tick, 1000);
     setTimer(locTimer);
@@ -108,11 +110,41 @@ export default function StartShower(props) {
                 <Button dark onPress={startShower} style={{ marginRight: 20 }}>
                   <Text>Start</Text>
                 </Button>
-                <Button dark onPress={startShower}>
+                <Button dark onPress={() => setPlaylist(true)}>
                   <Text>Start with Music</Text>
                 </Button>
               </View>
             </View>
+          )}
+          {showPlaylist && (
+            <>
+              <Image
+                source={{
+                  uri:
+                    "https://community.spotify.com/t5/image/serverpage/image-id/102455i71E9CBC86A66460A/image-size/large?v=1.0&px=999",
+                }}
+                style={{
+                  height: 300,
+                  width: 300,
+                  alignSelf: "center",
+                  margin: 20,
+                }}
+              />
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignSelf: "center",
+                }}
+              >
+                <Button dark onPress={startShower} style={{ marginRight: 20 }}>
+                  <Text>Shuffle Playlist</Text>
+                </Button>
+                <Button dark onPress={startShower}>
+                  <Text>Start Playlist</Text>
+                </Button>
+              </View>
+            </>
           )}
           {start && (
             <View
